@@ -1,0 +1,72 @@
+<div class="row mx-3 my-4 ">
+    <div class="col-md-12 ">
+        <!--Card-->
+        <mdb-card cascade="true" class="card" narrower="true" style="border-radius:20px !important;">
+            <!--Card image-->
+            <mdb-card-header class="card-header white ">
+                <h4 class="h4-responsive text-black">My Monitor Jobs</h4>
+            </mdb-card-header>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body>
+                <div class="card-body" style="overflow:scroll !important;">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>  Monitor Name </th>
+                                <th>Method</th>
+                                <th>API Name/Url</th>
+                                <th>Apdex</th>
+                                <th>Status</th>
+                                <!-- <th>Current State</th> -->
+                                <th>Start/Stop</th>
+                                <th>Edit/Delete</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor='let monitor of monitors'>
+                                <td>  <a (click) = "monitorState(monitor.id)"><i class="fa fa-question-circle">  </i>{{monitor.monitorName}}</a>  </td>
+                                <td>{{monitor.methodType}}</td>
+                                <td>{{monitor.url}}</td>
+                                <td>{{monitor.apdex}}</td>
+                                
+                                <!-- <td>{{monitor.statusCode}}</td> --> 
+                                <!-- <td>0.6</td> -->
+                                <td>
+                                    <!-- <i class="dot" style="color: green;margin-right:5px;"></i> -->
+                                    <span *ngIf="monitor.statusCode==200" class="dot dot-start mr-1"></span>
+                                    <span *ngIf="monitor.statusCode==0"  class="dot dot-idle mr-1"></span>
+                                    <span *ngIf="monitor.statusCode >=400" class="fa fa-thumbs-down mr-1"></span>
+
+
+                                </td>
+                                <!-- <td>
+                                    <span *ngIf="monitor.isExecuting==0">Stopped</span>
+                                    <span *ngIf="monitor.isExecuting==1" >running</span>
+                                </td> -->
+
+                                <td><a  class="start mx-3" (click) = "startRun(monitor.id)" ><i class="fas fa-play"  >
+                                    </i></a>
+                                    <a    class="stop mx-3" (click) = "stopRun(monitor.id)" ><i class="fas fa-stop">
+                                    </i></a>
+                                </td>
+
+                                <td><!--<button  (click) = "editMonitor(monitor.id)"  class="far fa-edit ml-3"></button> -->
+                                    <a  class="start mx-3" (click) = "updateMonitor(monitor.id)" ><i class="fas fa-edit"  >
+                                    </i></a> 
+                                    <a  (click) = "deleteMonitor(monitor.id)" ><i class="far fa-trash-alt"  >
+                                    </i></a>
+                                </td>
+                            </tr>
+                        
+
+                        </tbody>
+                    </table>
+                </div>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+</div>

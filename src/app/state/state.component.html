@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 admin-card">
+            <h4>State</h4>
+            <!-- <span>State</span> -->
+        </div>
+        <div class="col-md-4 admin-card">
+            <h4>{{Target}}</h4>
+            <span>Target</span>
+        </div>
+    </div>
+    <br>
+ 
+    <div class="row admin-up admin-dashboard">
+        <!-- <mdb-card cascade="true" class="cascading-admin-card card display-card"> -->
+        <!-- <div class="col-md-4 admin-card card">
+            <h4>Response Size</h4>
+            <hr>
+            <h5>881B</h5>
+            <div id="chartContainer1" style="width: 100%; height: 170px"></div>
+             <div style="display: block">
+               
+              </div> -->
+            <!-- <div class="row my-2"> -->
+            <!-- <div class="col-md-12"> -->
+            <!-- <div class="card shadow-sm">
+                        <div class="card-body">
+                            <canvas id="chLine" height="100"></canvas>
+                        </div>
+                    </div> -->
+            <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> --> 
+        <!-- <span>State</span> -->
+ 
+        <!-- </mdb-card> -->
+ 
+        <div class="col-md-4 admin-card card">
+            <h4>Response Size</h4>
+            <hr>
+            <h5>{{monitor.responseSize}}</h5>
+            <div id="chartContainer2" style="width: 100%; height: 170px;"></div>
+            <!-- <span>Target</span> -->
+        </div>
+        <div class="col-md-4 admin-card card">
+            <h4>Success Rate</h4>
+            <hr>
+            <h5>{{monitor.apdex * 100}} %</h5>
+            <div id="chartContainer3" style="width: 100%; height: 170px;"></div>
+            <!-- <span>Server</span> -->
+        </div>
+    </div>
+ 
+    <br><br>
+    <div class="row admin-up">
+        <h4>Events</h4>
+        <table class="table">
+            <tr>
+                <th>Timestamp</th>
+                <th>Status Code</th>
+                <!-- <th>Response Time(ms)</th> -->
+                <th>Response Size(bytes)</th>
+                <th>Summary</th>
+            </tr>
+            <tr >
+                <!-- <td>{{state.Timestamp}}</td> -->
+                <td>{{monitor.timeStamp}}</td>
+                <td>{{monitor.statusCode}}</td>
+                <!-- <td></td> -->
+                <td>{{monitor.responseSize}}</td>
+                <td>
+                    <span  *ngIf="monitor.statusCode <= 300" >Successfull Execution</span>
+                    <span   *ngIf="monitor.statusCode >= 400" >Failure Has occurred !!!</span>
+                </td>
+ 
+            </tr>
+        </table>
+        
+    </div>
+</div>

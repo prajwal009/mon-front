@@ -1,0 +1,169 @@
+  <div>
+    <div class="row dashboard-card mx-3 my-4">
+        <div class="col-md-3 display-card">
+            <mdb-card cascade="true" class="cascading-admin-card card display-card">
+              <div class="admin-up ">
+                <!-- <mdb-icon fas icon="chart-bar" class="accent-2" style="background:#59E67A;"></mdb-icon> -->
+                <i class="card-icon" style=" background-color: #6498FF;" class="ti-bar-chart-alt"></i>
+                <div class="data mr-3 align-middle mt-4">
+                  <h4 class="dashboard-card-value" style="color:#6498FF;">{{totalCount}}</h4>
+                  <span class="dashboard-card-title">API Monitored</span>  </div>
+              </div>
+              
+              <mdb-card-body>
+    
+              </mdb-card-body>
+    
+            </mdb-card>
+    
+          </div>
+    
+      <div class="col-md-3">
+        <mdb-card cascade="true" class="cascading-admin-card card display-card">
+          <div class="admin-up">
+            <!-- <mdb-icon fas icon="chart-bar" class="accent-2" style="background:#59E67A;"></mdb-icon> -->
+            <i class="card-icon" style="background-color: #59E67A;" class="ti-check-box"></i>
+            <div class="data mr-3 align-middle mt-4">
+              <h4 class="dashboard-card-value" style="color:#59E67A;">{{successCount}}</h4>
+              <span class="dashboard-card-title">API Passed</span>  </div>
+          </div>
+          
+          <mdb-card-body>
+
+          </mdb-card-body>
+
+        </mdb-card>
+
+      </div>
+      <div class="col-md-3">
+        <mdb-card cascade="true" class="cascading-admin-card card display-card">
+          <div class="admin-up">
+            <!-- <mdb-icon fas icon="chart-bar" class="accent-2" style="background:#FF8181;"></mdb-icon> -->
+            <i class="card-icon" style="background-color: #FF8181;" class="ti-alert"></i>
+
+            <div class="data mr-3 align-middle mt-4">
+              <h4 class="dashboard-card-value" style="color: #FF8181">{{failureCount}}</h4>
+              <span class="dashboard-card-title">API Failed</span>   </div>
+          </div>
+          
+          <mdb-card-body>
+
+          </mdb-card-body>
+
+        </mdb-card>
+
+      </div>
+      <div class="col-md-3">
+        <mdb-card cascade="true" class="cascading-admin-card card display-card">
+          <div class="admin-up">
+            <!-- <mdb-icon fas icon="chart-bar" class="accent-2" style="background:#FFC43A;"></mdb-icon> -->
+            <i class="card-icon" style="background-color: #FFC43A;" class="ti-target"></i>
+
+            <div class="data mr-3 align-middle mt-4">
+              <h4 class="dashboard-card-value" style="color: #FFC43A;"  >{{averageApdex | number:'1.5-5'}}</h4>
+              <span class="dashboard-card-title">Avg Apdex</span>   </div>
+          </div>
+          
+          <mdb-card-body>
+
+          </mdb-card-body>
+
+        </mdb-card>
+
+      </div>
+  </div>
+
+  
+
+
+
+
+<!--Grid row-->
+<div class="row mx-3 mt-3">
+
+    <!--Grid column-->
+    <div class="col-6">
+
+        <!--Card-->
+        <mdb-card class="card card-graph">
+
+            <div class="card-header">
+                <!-- <h4 style="display:inline-block;">Activity</h4>
+                <select class="ml-3 py-1 mdb-select md-form">
+                    <option value="" disabled selected>Select</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select> -->
+              </div>
+            <!--Card content-->
+            <mdb-card-body>
+
+                <!--Chart-->
+                <div style="display: block">
+                    <canvas mdbChart [chartType]="chart1Type" [datasets]="chartDatasets" [labels]="chartLabels"
+                            [colors]="chartColors" [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+                <!--/.Chart-->
+
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--/.Card-->
+
+    </div>
+    
+
+    <div class="col-6">
+        <!-- <mdb-card class="card card-table">
+            <div class="card-header">
+              <h4 style="display: inline-block;">Responses</h4>
+              <select class="ml-3 py-1 mdb-select md-form">
+                  <option value="" disabled selected>Select</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+            </div>
+            <mdb-card-body class="card-body" style=" overflow:scroll !important;">
+                    <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </mdb-card-body>         
+        </mdb-card> -->
+    </div>
+    <!--Grid column-->
+</div>
+
+<!--Grid row-->
+
+  </div>

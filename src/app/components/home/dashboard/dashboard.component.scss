@@ -1,0 +1,131 @@
+.card{
+  border-radius: 15px;
+}
+
+.dashboard-card-value{
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.display-card{
+  height: 9em;
+}
+
+
+.dashboard-card-title{
+  font-size: 1.3em;
+}
+
+
+    // .cascading-admin-card .admin-up mdb-icon {
+    //   background-color: blue;;
+    //   position: absolute;
+    //   // padding: 3em 4em 7.3em 2em;
+    //   text-align: left;
+    //   border-radius: 15px 0 0 15px;
+    // }
+
+    .cascading-admin-card .admin-up .data {
+      float: right;
+      // margin-top: 2rem;
+      text-align: right; 
+    
+    }
+      .cascading-admin-card .admin-up .data p {
+        color: #999999;
+        font-size: 12px; }
+
+.classic-admin-card .card-body {
+  color: #fff;
+  margin-bottom: 0;
+  padding: 0.9rem; }
+  .classic-admin-card .card-body p {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-bottom: 0; }
+  .classic-admin-card .card-body h4 {
+    margin-top: 10px; }
+  .classic-admin-card .card-body .float-right .fa {
+    font-size: 3rem;
+    opacity: 0.5; }
+
+.classic-admin-card .progress {
+  margin: 0;
+  opacity: 0.7; }
+
+
+
+
+.classic-admin-card .card-body {
+  color: #fff;
+  margin-bottom: 0;
+  padding: 0.9rem;
+}
+
+.classic-admin-card .card-body p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+
+.classic-admin-card .card-body h4 {
+  margin-top: 10px;
+}
+
+.classic-admin-card .card-body .float-right .fa {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.classic-admin-card .progress {
+  margin: 0;
+  opacity: 0.7;
+}
+
+.table-ui {
+  border: 1px solid #e0e0e9;
+}
+
+.card-header{
+  background: #ffffff;
+  border-radius: 15px 15px 0 0;
+}
+
+i {
+  font-size: 3em;
+  color: white;
+  border-radius: 15px 0 0 15px;
+  position: absolute;
+  padding: 1em 0.4em;
+}
+
+
+.mdb-select{
+  
+  border-radius: 5px;
+  color: #6498FF;
+  font-size: 1.2em;
+}
+
+
+.card-graph, .card-table{
+  height: 58vh;
+  border-radius: 10px;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+    .card-icon{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}

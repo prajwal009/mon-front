@@ -1,0 +1,144 @@
+<div>
+    <div class="row mx-3 my-4">
+        <div class="col-sm-12 col-md-12 col-lg-12" >
+            <div class="card">
+                <div class="card-header white">
+                    <h4 class="header" >Build Your Monitor</h4>
+                    <!-- <h5 class="header autosaved mt-1" >addedStatus</h5> -->
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <form (ngSubmit)="saveApi()">
+                                <div class="form-group inputWithIcon">
+                                    <input type="text" #monitorName="ngModel" 
+                                    [(ngModel)]="monitor.monitorName"
+                                    name="monitorName"
+                                    class="form-control height-attribute" 
+                                    placeholder="Monitor Name" 
+                                    style=" position: relative;">  
+                                </div>
+                              
+                       <div class="row">
+                        <div class="col-2 form-group">
+                                <select class="browser-default custom-select height-attribute"
+                                #methodType ="ngModel"
+                                [(ngModel)]="monitor.methodType" name="methodType">
+                                        <option  selected value="GET">GET</option>
+                                        <option value="POST">POST</option>
+                                        <option value="PUT">PUT</option>
+                                        <option value="DELETE">DELETE</option>
+                                </select>
+                                
+                        </div>
+                        <div class="col-10">
+                            <div class="form-group inputWithIcon">
+                                <input type="text" class="form-control height-attribute" 
+                                #url = "ngModel"
+                                [(ngModel)]="monitor.url" name="url" 
+                                placeholder="API Name/Url"
+                                        >  
+                            <!-- <i class="fas fa-link" aria-hidden="true"></i>                      -->
+                            </div>
+                        </div>
+                       </div>
+                            
+                       <div class="row">
+                            <div class="col-2">
+                                    <input type="text" class="form-control height-attribute" 
+                                    #time = "ngModel"
+                                    [(ngModel)]="monitor.time" name="time" 
+                                    placeholder="Enter time in seconds"
+                                            >
+                                    <!-- <select class="browser-default custom-select height-attribute"
+                                    #time="ngModel"
+                                    [(ngModel)]="monitor.time" name="time">
+                                            <option selected value="1">Every 2 min</option>
+                                            <option  value="2">10 min</option>
+                                            <option  value="3">20 min</option>
+                                            
+                                    </select>       -->
+                            </div>
+                            <div class="col-8">
+                                <div class="form-group inputWithIcon">
+                                    <input type="text" class="form-control height-attribute" 
+                                    style="width: 60vw;" #eMail="ngModel"
+                                    [(ngModel)]="monitor.eMail" name="eMail"
+                                     placeholder="Enter Email ID to get Alert">  
+                                <!-- <i class="far fa-envelope" aria-hidden="true"></i>  -->
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                    
+                                        <button type="submit" style="width: 8.8vw; font-family: sans-serif;" class="ml-5 btn btn-primary height-attribute">
+                                            Start</button>                 
+                                    
+                                </div>
+                       </div>
+
+                       <div class="row" >
+                           <div class="col-6" >
+                            <span></span>
+                            <!-- <div class ="row" >
+                                 <div class="col-2" >
+                                     <input type="text" placeholder="Name" class="form-control" 
+                                      name="headerName" [(ngModel)] = "monitor.headerName" >
+                                 </div>
+                                 <div class="col-3" >
+                                     <input type="text" placeholder="Value" class="form-control" 
+                                     name="headerValue" [(ngModel)]="monitor.headerValue" >
+                                 </div>
+                                 <span class="btn">
+                                     <a (click) = "createHeaderBlock()" >Add Headers</a>
+                                     <i class="fa fa-plus" aria-hidden="true"></i></span>
+                            </div> -->
+                            <!-- <div id="addHeaders" class="" ></div> -->
+                            <!-- <div class="row justify-content-center"> -->
+                                <div class="row" >
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-success mb-2" (click)="addHeader()">Add Headers </button>
+                                    <div class="container" *ngFor="let header of headers">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div>
+                                                    <input type="text" class="form-control" placeholder="Type" [(ngModel)]="header.headerKey"
+                                                        name="headerKey_{{i}}" />
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div>
+                                                    <input type="text" class="form-control" placeholder="Value" [(ngModel)]="header.headerValue"
+                                                        name="headerValue_{{i}}" />
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-left">
+                                                <button type="button" class="btn btn-danger btn-sm" (click)="removeHeader(i)">X</button>
+                                            </div>
+                                        </div>
+                             
+                                    </div>
+                             
+                                </div>
+                            </div>
+
+                           </div>
+                           <div class="col-6">
+                            <div class = "row" *ngIf = "monitor.methodType == 'POST' || monitor.methodType == 'PUT' " >
+                                <div class="col-8" >
+                                    <textarea name="jsonBody" id="" cols="30" rows="9" class="form-control"
+                                    placeholder="Enter Body Here" type="text" [(ngModel)] = "jsonBody"  >
+    
+                                    </textarea>
+                                </div>
+                           </div>
+                           </div>
+
+                       </div>
+                                
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

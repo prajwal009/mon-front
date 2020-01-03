@@ -1,0 +1,105 @@
+.page{
+  height: 100vh;
+  display: flex;
+}
+
+.row{
+  display: flex;
+  height: 25em;
+  font-family: 'Open Sans', sans-serif;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  box-shadow: 1px 1px 40px lightgray;
+}
+
+
+.card-form{
+  padding: 0 1.5em 0 1.5em;
+}
+
+.card-title{
+  color: #363636;
+  
+  font-size: 1.5em;
+
+}
+
+.input-lg{
+  padding: 1em 0 1em 0;
+}
+
+
+button{
+  background-color: #6498FF;
+  border: none;
+  font-size: 1.2em;
+
+}
+
+.forgot-password{
+  color: #6498FF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  text-decoration: none;
+
+
+}
+
+
+
+.login-img{
+  
+  display: flex;
+ 
+  background-image: url('https://mdbootstrap.com/img/Photos/Others/images/43.jpg');
+  /* background-color: grey; */
+  border-radius: 20px 0 0 20px;    
+  /* filter:blur(4px);
+  -o-filter:blur(4px);
+  -ms-filter:blur(4px);
+  -moz-filter:blur(4px);
+  -webkit-filter:blur(4px); */
+}
+
+.image-caption{
+  color: white;
+  font-family: sans-serif;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+
+  
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+}
+
+.card-img-left{
+  height: auto;
+  width:100%
+}
+
+
+.inner-addon { 
+  position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+position: absolute;
+padding: 20px;
+pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  50px; }
+.right-addon input { padding-right: 50px; }
